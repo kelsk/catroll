@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+
+<style>
+
+img {
+transition: 5s;
+-webkit-transition: 5s;
+}
+.catroll-holder {
+width: 100%;
+overflow: hidden;
+margin: 0 -20px 0 -20px;
+}
+
+#lois-holder {
+transition: 5s;
+-webkit-transition: 5s;
+margin-left: -320px;
+width: 450px;
+}
+.lois-spacer {
+width: 100px;
+display: inline-block;
+}
+</style>
+
+</head>
+
+
+<body onkeydown="rollLois(event)">
+<p>Press ctrl</p>
+<div class="catroll-holder">
+<div id="lois-holder">
+<p class="lois-spacer"></p>
+<img src="C:\Users\kelse\Documents\WebApp1`\Scratch\img\lois.bmp">
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+function rollLois(e) {
+var ctrlKeyPressed = e.ctrlKey;
+var lois = document.getElementsByTagName("img")[0];
+var loisHolder = document.getElementById("lois-holder");
+var resetMargin = "0px 0px 0px -320px";
+
+if (ctrlKeyPressed == true)
+{
+lois.style.transform = "rotate(1080deg)";
+loisHolder.style.margin = "0px 0px 0px 1000px";
+console.log(loisHolder.style.margin);
+window.setInterval( function resetLois() {
+lois.style.transform = "rotate(-720deg)";
+loisHolder.style.margin = "0px 0px 0px -400px";
+}, 5000);
+
+};
+
+};
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
