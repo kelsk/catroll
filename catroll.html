@@ -4,11 +4,12 @@
 
 <style>
 
-img {
+.lois-photo {
   transition: 5s;
   -webkit-transition: 5s;
 }
 .catroll-holder {
+  font-size: 30px;
   width: 100%;
   overflow: hidden;
   margin: 0 -20px 0 -20px;
@@ -35,7 +36,9 @@ img {
   <div class="catroll-holder">
     <div id="lois-holder">
     <p class="lois-spacer"></p>
-    <img src="C:\Users\kelse\Documents\WebApp1`\Scratch\img\lois.bmp">
+    <img class="lois-photo"
+         alt="CAT PHOTO"
+         src="lois.bmp">
     </div>
   </div>
 
@@ -46,7 +49,6 @@ function rollLois(e) {
   var ctrlKeyPressed = e.ctrlKey;
   var lois = document.getElementsByTagName("img")[0];
   var loisHolder = document.getElementById("lois-holder");
-  var resetMargin = "0px 0px 0px -320px";
 
   if (ctrlKeyPressed == true)
   {
